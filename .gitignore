@@ -1,0 +1,6 @@
+bg-video.mp4
+*.pyc
+__pycache__/
+.env
+.DS_Store
+*.log

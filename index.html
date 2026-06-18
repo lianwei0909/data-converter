@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数据转换工具</title>
+    <style>
+        * { margin:0; padding:0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+            background: linear-gradient(135deg, #0a0e27 0%, #1a1e3a 50%, #2a1e4a 100%);
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            text-align: center;
+            max-width: 600px;
+            padding: 60px 40px;
+        }
+        h1 {
+            font-size: 2.2em;
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .subtitle {
+            color: rgba(255,255,255,.5);
+            margin-bottom: 50px;
+            font-size: 1.05em;
+        }
+        .modules {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .module-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 18px 30px;
+            border-radius: 16px;
+            font-size: 1.1em;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all .3s cubic-bezier(.16,1,.3,1);
+            border: 2px solid transparent;
+        }
+        .module-btn .icon { font-size: 1.3em; }
+        .module-btn.approve {
+            background: rgba(102,126,234,.12);
+            border-color: rgba(102,126,234,.4);
+            color: rgba(255,255,255,.9);
+        }
+        .module-btn.approve:hover {
+            background: rgba(102,126,234,.25);
+            border-color: rgba(102,126,234,.7);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(102,126,234,.3);
+        }
+        .module-btn.reject {
+            background: rgba(239,68,68,.12);
+            border-color: rgba(239,68,68,.4);
+            color: rgba(255,255,255,.9);
+        }
+        .module-btn.reject:hover {
+            background: rgba(239,68,68,.25);
+            border-color: rgba(239,68,68,.7);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(239,68,68,.3);
+        }
+        .module-btn.music {
+            background: rgba(168,85,247,.12);
+            border-color: rgba(168,85,247,.4);
+            color: rgba(255,255,255,.9);
+        }
+        .module-btn.music:hover {
+            background: rgba(168,85,247,.25);
+            border-color: rgba(168,85,247,.7);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(168,85,247,.3);
+        }
+        .footer {
+            margin-top: 50px;
+            color: rgba(255,255,255,.3);
+            font-size: .85em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📊 数据转换工具</h1>
+        <p class="subtitle">Excel / CSV → 标准化模板一键转换</p>
+
+        <div class="modules">
+            <a href="converter-approve.html" class="module-btn approve">
+                <span class="icon">✅</span>
+                <span>过审模块</span>
+            </a>
+            <a href="converter-reject.html" class="module-btn reject">
+                <span class="icon">❌</span>
+                <span>不过审模块</span>
+            </a>
+            <a href="converter-music.html" class="module-btn music">
+                <span class="icon">🎵</span>
+                <span>音乐模块</span>
+            </a>
+        </div>
+
+        <p class="footer">支持拖拽上传 · 一键导出 Excel · 完全在浏览器端运行</p>
+    </div>
+</body>
+</html>
